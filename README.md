@@ -5,7 +5,8 @@ Static homepage concept for [alliancemjdevelopments.com](https://alliancemjdevel
 ## Structure
 
 ```
-index.html
+index.html          Homepage (V1)
+homepage-v2.html    Homepage V2, alternative layout (uses assets/css/v2.css and assets/js/v2.js)
 assets/
   css/style.css     All styles (custom properties, responsive breakpoints at 1180, 980 and 680px)
   js/main.js        Header state, mobile menu, development tabs, portfolio filter, hover previews, reveal animations
