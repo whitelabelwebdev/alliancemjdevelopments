@@ -13,7 +13,7 @@
   <meta name="theme-color" content="#16181c">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
   <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
-  <link rel="preload" href="assets/fonts/afacad-flux-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/manrope-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/images/projects/alliance-bazaar-wernerville/slide-1.jpg" as="image">
   <link rel="stylesheet" href="assets/css/style.css">
   <script type="application/ld+json">
@@ -40,11 +40,13 @@
       </a>
       <nav class="main-nav" aria-label="Main">
         <ul>
-          <li><a href="#company">Company</a></li>
-          <li><a href="#developments">Developments</a></li>
-          <li><a href="#portfolio">Projects</a></li>
-          <li><a href="#approach">Approach</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#" data-nolink aria-current="page" class="is-current">Welcome</a></li>
+          <li><a href="#" data-nolink>Projects</a></li>
+          <li><a href="#" data-nolink>Retail</a></li>
+          <li><a href="#" data-nolink>Multi Family</a></li>
+          <li><a href="#" data-nolink>Land</a></li>
+          <li><a href="#" data-nolink>About</a></li>
+          <li><a href="#" data-nolink>Contact</a></li>
         </ul>
       </nav>
       <div class="header-actions">
@@ -55,11 +57,13 @@
     </div>
     <div class="mobile-menu" id="mobile-menu" hidden>
       <ul>
-        <li><a href="#company">Company</a></li>
-        <li><a href="#developments">Developments</a></li>
-        <li><a href="#portfolio">Projects</a></li>
-        <li><a href="#approach">Approach</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#" data-nolink>Welcome</a></li>
+        <li><a href="#" data-nolink>Projects</a></li>
+        <li><a href="#" data-nolink>Retail</a></li>
+        <li><a href="#" data-nolink>Multi Family</a></li>
+        <li><a href="#" data-nolink>Land</a></li>
+        <li><a href="#" data-nolink>About</a></li>
+        <li><a href="#" data-nolink>Contact</a></li>
       </ul>
       <a class="btn btn-sun" href="#contact">Leasing inquiry</a>
       <a class="mobile-phone" href="tel:+17804331140">(780) 433-1140</a>
@@ -74,45 +78,87 @@
         <img src="assets/images/projects/alliance-bazaar-wernerville/slide-1.jpg" alt="Aerial rendering of Alliance Bazaar Wernerville retail centre on Ellerslie Road SW, Edmonton" width="1920" height="1080" fetchpriority="high">
       </div>
       <div class="wrap hero-content">
-        <p class="eyebrow eyebrow-light">Commercial development, leasing and management</p>
-        <h1 id="hero-title">Enhancing Edmonton <em>for over</em> 20&nbsp;years.</h1>
-        <p class="hero-lede">We plan, develop, sell and lease prime real estate across Edmonton and beyond, from neighbourhood retail centres to multi family homes and land holdings.</p>
-        <div class="hero-ctas">
+        <p class="eyebrow eyebrow-light hero-anim" style="--d:.1s">Commercial development, leasing and management</p>
+        <h1 id="hero-title" data-split>Enhancing Edmonton <em>for over</em> <span class="hl">20&nbsp;years.</span></h1>
+        <p class="hero-lede hero-anim" style="--d:.95s">We plan, develop, sell and lease prime real estate across Edmonton and beyond, from neighbourhood retail centres to multi family homes and land holdings.</p>
+        <div class="hero-ctas hero-anim" style="--d:1.1s">
           <a class="btn btn-sun btn-lg" href="#portfolio">View available space <span class="arrow" aria-hidden="true"></span></a>
           <a class="btn btn-ghost btn-lg" href="#contact">Talk to our team</a>
         </div>
       </div>
       <div class="hero-ledger">
-        <div class="wrap ledger-inner">
-          <div class="ledger-item"><span class="ledger-num" data-count="20">20</span><span class="ledger-plus">+</span><span class="ledger-label">Years developing in Edmonton</span></div>
-          <div class="ledger-item"><span class="ledger-num" data-count="26">26</span><span class="ledger-label">Projects in the portfolio</span></div>
-          <div class="ledger-item"><span class="ledger-num" data-count="14">14</span><span class="ledger-label">With space for lease or sale</span></div>
-          <div class="ledger-item ledger-wide"><span class="ledger-label">Edmonton &middot; St. Albert &middot; Leduc &middot; Fort Saskatchewan &middot; Sherwood Park &middot; Sturgeon County &middot; Airdrie</span></div>
+        <div class="wrap ledger-stats">
+          <div class="stat" style="--i:0">
+            <div class="stat-figure"><span class="ledger-num" data-count="20">0</span><span class="ledger-plus">+</span></div>
+            <span class="stat-bar" aria-hidden="true"><i></i></span>
+            <span class="ledger-label">Years developing in Edmonton</span>
+          </div>
+          <div class="stat" style="--i:1">
+            <div class="stat-figure"><span class="ledger-num" data-count="26">0</span></div>
+            <span class="stat-bar" aria-hidden="true"><i></i></span>
+            <span class="ledger-label">Projects in the portfolio</span>
+          </div>
+          <div class="stat" style="--i:2">
+            <div class="stat-figure"><span class="ledger-num" data-count="14">0</span><span class="stat-of">/ 26</span></div>
+            <span class="stat-bar" aria-hidden="true"><i style="--fill:.54"></i></span>
+            <span class="ledger-label">With space for lease or sale</span>
+          </div>
+          <a class="stat stat-cta" href="#portfolio" style="--i:3">
+            <span class="stat-cta-label">Browse all 26 projects</span>
+            <span class="stat-cta-icon" aria-hidden="true"><span class="arrow"></span></span>
+          </a>
+        </div>
+        <div class="ticker" aria-label="Communities we develop in">
+          <span class="ticker-tag">Where we build</span>
+          <div class="ticker-window">
+            <ul class="ticker-track"><li>Edmonton</li><li>St. Albert</li><li>Leduc</li><li>Fort Saskatchewan</li><li>Sherwood Park</li><li>Sturgeon County</li><li>Redwater</li><li>Airdrie</li></ul>
+            <ul class="ticker-track" aria-hidden="true"><li>Edmonton</li><li>St. Albert</li><li>Leduc</li><li>Fort Saskatchewan</li><li>Sherwood Park</li><li>Sturgeon County</li><li>Redwater</li><li>Airdrie</li></ul>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- COMPANY -->
     <section class="company section" id="company" aria-labelledby="company-title">
-      <div class="wrap company-grid">
-        <div class="company-head reveal">
+      <div class="wrap">
+        <div class="company-top reveal">
           <p class="eyebrow">The company</p>
           <h2 id="company-title">Neighbourhood centres built to be the <em>destination of choice.</em></h2>
         </div>
-        <div class="company-body reveal">
-          <p class="lead">Alliance MJ Developments is an Edmonton company specializing in the commercial development and management of neighbourhood and community retail centres.</p>
-          <p>For over 20 years we have planned, developed, sold and leased millions of square feet of prime real estate in Edmonton and beyond, with millions more planned and in development. Everything we build comes back to two commitments: the success of our retail partners, and making each property a place consumers choose to visit.</p>
-          <div class="directors">
-            <div class="director">
-              <span class="director-initials" aria-hidden="true">MS</span>
-              <div><strong>Mintu Sunner</strong><span>Group Director</span></div>
-            </div>
-            <div class="director">
-              <span class="director-initials" aria-hidden="true">JD</span>
-              <div><strong>Joe Dhami</strong><span>Group Director</span></div>
+        <div class="company-grid">
+          <div class="company-visual reveal">
+            <figure class="cv-main"><img src="assets/images/projects/alliance-centre-glenridding/slide-3.jpg" alt="Alliance Centre Glenridding, home of the Alliance MJ Developments head office" loading="lazy" width="1600" height="900"></figure>
+            <figure class="cv-inset"><img src="assets/images/projects/alliance-centre-southfork/slide-1.jpg" alt="Alliance Centre Southfork retail centre in Leduc" loading="lazy" width="1600" height="900"></figure>
+            <div class="cv-badge">
+              <span class="cv-badge-k">Head office</span>
+              <strong>Alliance Centre Glenridding</strong>
+              <span>2045 163 St SW, Edmonton</span>
             </div>
           </div>
-          <p class="small">Our Group Directors oversee strategic direction and growth, and specialize in every aspect of commercial development and leasing. They stay hands-on with key stakeholders at each stage of a development.</p>
+          <div class="company-body reveal">
+            <p class="lead">Alliance MJ Developments is an Edmonton company specializing in the commercial development and management of neighbourhood and community retail centres.</p>
+            <p>For over 20 years we have planned, developed, sold and leased millions of square feet of prime real estate in Edmonton and beyond, with millions more planned and in development.</p>
+            <div class="commitments">
+              <div class="commit">
+                <span class="commit-n">01</span>
+                <h3>The success of our retail partners</h3>
+                <p>Every centre is planned around the tenants who trade there.</p>
+              </div>
+              <div class="commit">
+                <span class="commit-n">02</span>
+                <h3>A destination of choice for consumers</h3>
+                <p>Properties people want to visit, and keep coming back to.</p>
+              </div>
+            </div>
+            <div class="directors-card">
+              <p class="dc-k">Led by our Group Directors</p>
+              <div class="directors">
+                <div class="director"><span class="director-initials" aria-hidden="true">MS</span><div><strong>Mintu Sunner</strong><span>Group Director</span></div></div>
+                <div class="director"><span class="director-initials" aria-hidden="true">JD</span><div><strong>Joe Dhami</strong><span>Group Director</span></div></div>
+              </div>
+              <p class="dc-note">Overseeing strategic direction and growth, and hands-on with key stakeholders at each stage of every development.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -127,62 +173,37 @@
           </div>
           <p class="section-intro">From the plaza on the corner to the homes around it and the land that comes next, our work covers the full life of a community.</p>
         </div>
-
-        <div class="dev-tabs" data-tabs>
-          <div class="dev-list" role="tablist" aria-label="Development types">
-            <button class="dev-tab is-active" role="tab" id="tab-retail" aria-controls="panel-retail" aria-selected="true">
-              <span class="dev-idx">01</span><span class="dev-name">Retail Development</span>
-            </button>
-            <button class="dev-tab" role="tab" id="tab-multi" aria-controls="panel-multi" aria-selected="false" tabindex="-1">
-              <span class="dev-idx">02</span><span class="dev-name">Multi Family</span>
-            </button>
-            <button class="dev-tab" role="tab" id="tab-land" aria-controls="panel-land" aria-selected="false" tabindex="-1">
-              <span class="dev-idx">03</span><span class="dev-name">Land Holdings</span>
-            </button>
-          </div>
-
-          <div class="dev-panels">
-            <article class="dev-panel is-active" role="tabpanel" id="panel-retail" aria-labelledby="tab-retail">
-              <figure class="dev-figure"><img src="assets/images/projects/the-shoppes-chappelle-crossing/slide-1.jpg" alt="Rendering of The Shoppes Chappelle Crossing retail centre in southwest Edmonton" loading="lazy" width="1600" height="900"></figure>
-              <div class="dev-copy">
-                <h3>Neighbourhood and community retail centres</h3>
-                <p>Our core business. We develop, lease and manage retail centres across Edmonton, St. Albert, Leduc and Fort Saskatchewan, designed with Edmonton's leading design consultants so each one becomes a destination.</p>
-                <ul class="dev-examples">
-                  <li>Alliance Centre Glenridding</li>
-                  <li>The Shoppes Chappelle Crossing</li>
-                  <li>Alliance Centre Gateway</li>
-                  <li>Alliance Bazaar Wernerville</li>
-                </ul>
-                <a class="text-link" href="#portfolio" data-filter-link="retail">See retail projects</a>
-              </div>
-            </article>
-            <article class="dev-panel" role="tabpanel" id="panel-multi" aria-labelledby="tab-multi" hidden>
-              <figure class="dev-figure"><img src="assets/images/projects/granville-west/slide-1.jpg" alt="Rendering of Granville West Townhouses in northwest Edmonton" loading="lazy" width="1600" height="900"></figure>
-              <div class="dev-copy">
-                <h3>Townhomes and residences</h3>
-                <p>Multi family communities that sit alongside the neighbourhoods our retail centres serve, now available for lease in northwest and north Edmonton.</p>
-                <ul class="dev-examples">
-                  <li>Granville West Townhouses</li>
-                  <li>Alliance Residences Crystallina</li>
-                </ul>
-                <a class="text-link" href="#portfolio" data-filter-link="multi">See multi family projects</a>
-              </div>
-            </article>
-            <article class="dev-panel" role="tabpanel" id="panel-land" aria-labelledby="tab-land" hidden>
-              <figure class="dev-figure"><img src="assets/images/projects/chappelle-landing/slide-1.jpg" alt="Aerial view of the Chappelle Landing development site in southwest Edmonton" loading="lazy" width="1600" height="900"></figure>
-              <div class="dev-copy">
-                <h3>Land for what comes next</h3>
-                <p>Strategic land holdings across the Edmonton region that set up the next generation of Alliance MJ developments.</p>
-                <ul class="dev-examples">
-                  <li>Colchester, Sherwood Park</li>
-                  <li>Sturgeon County</li>
-                  <li>Redwater</li>
-                  <li>City of Leduc</li>
-                </ul>
-                <a class="text-link" href="#portfolio" data-filter-link="land">See land holdings</a>
-              </div>
-            </article>
-          </div>
+        <div class="dev-grid">
+          <article class="dev-card reveal" id="dev-retail">
+            <figure><img src="assets/images/projects/the-shoppes-chappelle-crossing/slide-1.jpg" alt="Rendering of The Shoppes Chappelle Crossing retail centre in southwest Edmonton" loading="lazy" width="1600" height="900"><span class="dev-num">01</span></figure>
+            <div class="dev-card-body">
+              <p class="dev-kicker">Retail Development</p>
+              <h3>Neighbourhood and community retail centres</h3>
+              <p>Our core business. We develop, lease and manage retail centres across Edmonton, St. Albert, Leduc and Fort Saskatchewan, designed with Edmonton's leading design consultants.</p>
+              <ul class="dev-examples"><li>Alliance Centre Glenridding</li><li>The Shoppes Chappelle Crossing</li><li>Alliance Centre Gateway</li></ul>
+              <a class="dev-link" href="#portfolio" data-filter-link="retail">See retail projects <span class="arrow" aria-hidden="true"></span></a>
+            </div>
+          </article>
+          <article class="dev-card reveal" id="dev-multi">
+            <figure><img src="assets/images/projects/alliance-residences-crystallina/slide-1.jpg" alt="Rendering of Alliance Residences Crystallina townhomes in north Edmonton" loading="lazy" width="1600" height="900"><span class="dev-num">02</span></figure>
+            <div class="dev-card-body">
+              <p class="dev-kicker">Multi Family</p>
+              <h3>Townhomes and residences</h3>
+              <p>Multi family communities that sit alongside the neighbourhoods our retail centres serve, now available for lease in northwest and north Edmonton.</p>
+              <ul class="dev-examples"><li>Granville West Townhouses</li><li>Alliance Residences Crystallina</li></ul>
+              <a class="dev-link" href="#portfolio" data-filter-link="multi">See multi family projects <span class="arrow" aria-hidden="true"></span></a>
+            </div>
+          </article>
+          <article class="dev-card reveal" id="dev-land">
+            <figure><img src="assets/images/projects/chappelle-landing/slide-1.jpg" alt="Aerial view of the Chappelle Landing development site in southwest Edmonton" loading="lazy" width="1600" height="900"><span class="dev-num">03</span></figure>
+            <div class="dev-card-body">
+              <p class="dev-kicker">Land Holdings</p>
+              <h3>Land for what comes next</h3>
+              <p>Strategic land holdings across the Edmonton region that set up the next generation of Alliance MJ developments.</p>
+              <ul class="dev-examples"><li>Colchester, Sherwood Park</li><li>Sturgeon County and Redwater</li><li>City of Leduc</li></ul>
+              <a class="dev-link" href="#portfolio" data-filter-link="land">See land holdings <span class="arrow" aria-hidden="true"></span></a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -190,56 +211,48 @@
     <!-- FEATURED -->
     <section class="featured section" aria-labelledby="featured-title">
       <div class="wrap">
-        <div class="section-head reveal">
-          <p class="eyebrow">Featured projects</p>
-          <h2 id="featured-title">Places we have built, <em>and are building.</em></h2>
+        <div class="section-head split reveal">
+          <div>
+            <p class="eyebrow">Featured projects</p>
+            <h2 id="featured-title">Places we have built, <em>and are building.</em></h2>
+          </div>
+          <a class="btn btn-ink" href="#portfolio">View full portfolio <span class="arrow" aria-hidden="true"></span></a>
         </div>
-        <div class="feature-grid">
-          <article class="feature feature-xl reveal">
-            <a href="#contact" class="feature-link" aria-label="Inquire about Alliance Centre Glenridding">
-              <figure><img src="assets/images/projects/alliance-centre-glenridding/slide-1.jpg" alt="Alliance Centre Glenridding retail centre at 2045 163 Street SW, Edmonton" loading="lazy" width="1600" height="900"></figure>
-              <div class="feature-meta">
-                <span class="status status-leased">Fully leased</span>
-                <h3>Alliance Centre Glenridding</h3>
-                <p>2045 163 St SW, Edmonton</p>
-              </div>
-            </a>
-          </article>
-          <article class="feature reveal">
-            <a href="#contact" class="feature-link" aria-label="Inquire about The Shoppes Chappelle Crossing">
-              <figure><img src="assets/images/projects/the-shoppes-chappelle-crossing/slide-2.jpg" alt="The Shoppes Chappelle Crossing storefronts in southwest Edmonton" loading="lazy" width="1600" height="900"></figure>
-              <div class="feature-meta">
-                <span class="status status-open">For lease / sale</span>
-                <h3>The Shoppes Chappelle Crossing</h3>
-                <p>6403 Cartmell Place SW, Edmonton</p>
-              </div>
-            </a>
-          </article>
-          <article class="feature reveal">
-            <a href="#contact" class="feature-link" aria-label="Inquire about Alliance Centre Gateway">
-              <figure><img src="assets/images/projects/alliance-centre-gateway/slide-1.jpg" alt="Alliance Centre Gateway on Gateway Boulevard NW, Edmonton" loading="lazy" width="1600" height="900"></figure>
-              <div class="feature-meta">
-                <span class="status status-open">For lease / sale</span>
-                <h3>Alliance Centre Gateway</h3>
-                <p>4805 Gateway Blvd NW, Edmonton</p>
-              </div>
-            </a>
-          </article>
-          <article class="feature feature-wide reveal">
-            <a href="#contact" class="feature-link" aria-label="Inquire about Granville West Townhouses">
-              <figure><img src="assets/images/projects/granville-west/slide-2.jpg" alt="Granville West Townhouses in northwest Edmonton" loading="lazy" width="1600" height="900"></figure>
-              <div class="feature-meta">
-                <span class="status status-open">For lease</span>
-                <h3>Granville West Townhouses</h3>
-                <p>3131 Granville Drive NW, Edmonton</p>
-              </div>
-            </a>
-          </article>
+        <div class="fx-grid">
+          <a class="fx fx-a reveal" href="#contact" aria-label="Inquire about Alliance Centre Glenridding">
+            <img src="assets/images/projects/alliance-centre-glenridding/slide-1.jpg" alt="Alliance Centre Glenridding retail centre at 2045 163 Street SW, Edmonton" loading="lazy">
+            <span class="fx-pill pill-leased">Fully leased</span>
+            <div class="fx-info"><span class="fx-place">Glenridding, Edmonton</span><h3>Alliance Centre Glenridding</h3><span class="fx-addr">2045 163 St SW</span></div>
+          </a>
+          <a class="fx fx-b reveal" href="#contact" aria-label="Inquire about The Shoppes Chappelle Crossing">
+            <img src="assets/images/projects/the-shoppes-chappelle-crossing/slide-2.jpg" alt="The Shoppes Chappelle Crossing storefronts in southwest Edmonton" loading="lazy">
+            <span class="fx-pill pill-open">For lease / sale</span>
+            <div class="fx-info"><span class="fx-place">Chappelle, Edmonton</span><h3>The Shoppes Chappelle Crossing</h3><span class="fx-addr">6403 Cartmell Place SW</span></div>
+          </a>
+          <a class="fx fx-c reveal" href="#contact" aria-label="Inquire about Alliance Centre Gateway">
+            <img src="assets/images/projects/alliance-centre-gateway/slide-1.jpg" alt="Alliance Centre Gateway on Gateway Boulevard NW, Edmonton" loading="lazy">
+            <span class="fx-pill pill-open">For lease / sale</span>
+            <div class="fx-info"><span class="fx-place">Gateway Boulevard, Edmonton</span><h3>Alliance Centre Gateway</h3><span class="fx-addr">4805 Gateway Blvd NW</span></div>
+          </a>
         </div>
+        <article class="fx-split reveal">
+          <figure><img src="assets/images/projects/granville-west/slide-2.jpg" alt="Granville West Townhouses in northwest Edmonton" loading="lazy"></figure>
+          <div class="fx-split-body">
+            <span class="fx-pill pill-open">For lease</span>
+            <p class="dev-kicker">Multi family</p>
+            <h3>Granville West Townhouses</h3>
+            <p>Townhomes for lease in northwest Edmonton, part of the multi family side of our portfolio alongside Alliance Residences Crystallina.</p>
+            <dl class="fx-facts">
+              <div><dt>Address</dt><dd>3131 Granville Drive NW, Edmonton</dd></div>
+              <div><dt>Status</dt><dd>For lease</dd></div>
+            </dl>
+            <a class="btn btn-sun" href="#contact">Ask about Granville West <span class="arrow" aria-hidden="true"></span></a>
+          </div>
+        </article>
       </div>
     </section>
 
-    <!-- PORTFOLIO INDEX -->
+    <!-- PORTFOLIO -->
     <section class="portfolio section section-paper" id="portfolio" aria-labelledby="portfolio-title">
       <div class="wrap">
         <div class="section-head split reveal">
@@ -247,6 +260,9 @@
             <p class="eyebrow">Full portfolio</p>
             <h2 id="portfolio-title">Find your <em>next location.</em></h2>
           </div>
+          <p class="section-intro">Retail centres, residences and land across Edmonton, St. Albert, Leduc, Fort Saskatchewan, Sherwood Park, Sturgeon County and Airdrie.</p>
+        </div>
+        <div class="portfolio-bar">
           <div class="filters" role="group" aria-label="Filter projects">
             <button class="chip is-active" data-filter="all" aria-pressed="true">All <span>26</span></button>
             <button class="chip" data-filter="lease" aria-pressed="false">Available <span>14</span></button>
@@ -254,39 +270,37 @@
             <button class="chip" data-filter="future" aria-pressed="false">Future <span>3</span></button>
             <button class="chip" data-filter="land" aria-pressed="false">Land <span>4</span></button>
           </div>
+          <p class="pc-count" aria-live="polite">Showing <strong data-shown>26</strong> projects</p>
         </div>
-
-        <div class="index">
-          <div class="index-preview" aria-hidden="true"><img src="assets/images/projects/alliance-centre-gateway/thumb.jpg" alt=""></div>
-          <ol class="index-list">
-            <li data-type="lease retail" data-img="alliance-centre-gateway"><span class="i-name">Alliance Centre Gateway</span><span class="i-place">4805 Gateway Blvd NW, Edmonton</span><span class="status status-open">For lease / sale</span></li>
-            <li data-type="lease multi" data-img="granville-west"><span class="i-name">Granville West Townhouses</span><span class="i-place">3131 Granville Dr NW, Edmonton</span><span class="status status-open">For lease</span></li>
-            <li data-type="lease multi" data-img="alliance-residences-crystallina"><span class="i-name">Alliance Residences Crystallina</span><span class="i-place">6940 178 Ave NW, Edmonton</span><span class="status status-open">For lease</span></li>
-            <li data-type="leased retail" data-img="alliance-centre-glenridding"><span class="i-name">Alliance Centre Glenridding</span><span class="i-place">2045 163 St SW, Edmonton</span><span class="status status-leased">Fully leased</span></li>
-            <li data-type="lease retail" data-img="alliance-centre-southport"><span class="i-name">Alliance Centre Southport</span><span class="i-place">3504 Ewing Trail SW, Edmonton</span><span class="status status-open">For lease</span></li>
-            <li data-type="lease retail" data-img="alliance-centre-crystallina"><span class="i-name">Alliance Centre Crystallina</span><span class="i-place">66 St NW &amp; 178 Ave NW, Edmonton</span><span class="status status-open">For lease / sale</span></li>
-            <li data-type="lease retail" data-img="alliance-bazaar-wernerville"><span class="i-name">Alliance Bazaar Wernerville</span><span class="i-place">6830 Ellerslie Rd SW, Edmonton</span><span class="status status-open">For lease</span></li>
-            <li data-type="lease retail" data-img="the-shoppes-chappelle-crossing"><span class="i-name">The Shoppes Chappelle Crossing</span><span class="i-place">6403 Cartmell Pl SW, Edmonton</span><span class="status status-open">For lease / sale</span></li>
-            <li data-type="lease retail" data-img="alliance-centre-southridge"><span class="i-name">Alliance Centre Southridge</span><span class="i-place">Fort Saskatchewan</span><span class="status status-open">For lease</span></li>
-            <li data-type="leased retail" data-img="alliance-centre-silverberry"><span class="i-name">Alliance Centre Silverberry</span><span class="i-place">3341 34 St NW, Edmonton</span><span class="status status-leased">Fully leased</span></li>
-            <li data-type="lease retail" data-img="alliance-centre-st-albert-trail"><span class="i-name">Alliance Centre St. Albert Trail</span><span class="i-place">13151 146 St NW, Edmonton</span><span class="status status-open">For lease</span></li>
-            <li data-type="lease retail" data-img="alliance-centre-mistamin"><span class="i-name">Alliance Centre Mistamin</span><span class="i-place">12719 156 St NW, Edmonton</span><span class="status status-open">For lease</span></li>
-            <li data-type="future retail" data-img="alliance-centre-127-ave-83-st"><span class="i-name">Alliance Centre 127 Ave 83 St</span><span class="i-place">127 Ave NW &amp; 83 St NW, Edmonton</span><span class="status status-future">Future project</span></li>
-            <li data-type="lease retail" data-img="alliance-centre-riverside"><span class="i-name">Alliance Centre Riverside</span><span class="i-place">3 Redspur Dr, St. Albert</span><span class="status status-open">For lease</span></li>
-            <li data-type="leased retail" data-img="alliance-centre-southfork"><span class="i-name">Alliance Centre Southfork</span><span class="i-place">100 Southfork Dr, Leduc</span><span class="status status-leased">Fully leased</span></li>
-            <li data-type="leased retail" data-img="alliance-centre-mcconachie"><span class="i-name">Alliance Centre McConachie</span><span class="i-place">16510 59A St NW, Edmonton</span><span class="status status-leased">Fully leased</span></li>
-            <li data-type="leased retail" data-img="mcconachie-landing-west"><span class="i-name">McConachie Landing West</span><span class="i-place">6504 170 Ave NW, Edmonton</span><span class="status status-leased">Fully leased</span></li>
-            <li data-type="lease retail" data-img="alliance-centre-gorman"><span class="i-name">Alliance Centre Gorman</span><span class="i-place">153 Ave &amp; 18 St NW, Edmonton</span><span class="status status-open">For lease</span></li>
-            <li data-type="lease retail" data-img="heritage-valley-pointe"><span class="i-name">Heritage Valley Pointe</span><span class="i-place">1115 103A St NW, Edmonton</span><span class="status status-open">For lease</span></li>
-            <li data-type="future retail" data-img="chappelle-landing"><span class="i-name">Chappelle Landing</span><span class="i-place">2804 Heritage Valley Trail SW, Edmonton</span><span class="status status-future">Future project</span></li>
-            <li data-type="lease retail" data-img="wildflower-gate"><span class="i-name">Wildflower Gate</span><span class="i-place">75 Wildwoods Court SW, Airdrie</span><span class="status status-open">For lease</span></li>
-            <li data-type="future retail" data-img="rugby-land"><span class="i-name">Rugby Land Urban Village</span><span class="i-place">111 St &amp; Ellerslie Rd, Edmonton</span><span class="status status-future">Future project</span></li>
-            <li data-type="land" data-img="colchester"><span class="i-name">Colchester</span><span class="i-place">Sherwood Park</span><span class="status status-land">Land</span></li>
-            <li data-type="land" data-img="sturgeon-county"><span class="i-name">Sturgeon County</span><span class="i-place">Redwater and Sturgeon County area</span><span class="status status-land">Land</span></li>
-            <li data-type="land" data-img="redwater"><span class="i-name">Redwater</span><span class="i-place">Redwater area</span><span class="status status-land">Land</span></li>
-            <li data-type="land" data-img="city-of-leduc"><span class="i-name">City of Leduc</span><span class="i-place">Leduc area</span><span class="status status-land">Land</span></li>
-          </ol>
-        </div>
+        <ul class="pgrid is-collapsed">
+          <li class="pcard" data-type="lease retail"><a href="#contact" aria-label="Inquire about Alliance Centre Gateway"><figure><img src="assets/images/projects/alliance-centre-gateway/thumb.jpg" alt="Alliance Centre Gateway" loading="lazy" width="800" height="568"><span class="fx-pill pill-open">For lease / sale</span></figure><div class="pc-body"><h3>Alliance Centre Gateway</h3><p>4805 Gateway Blvd NW, Edmonton</p></div><span class="pc-go" aria-hidden="true"><span class="arrow"></span></span></a></li>
+          <li class="pcard" data-type="lease multi"><a href="#contact" aria-label="Inquire about Granville West Townhouses"><figure><img src="assets/images/projects/granville-west/thumb.jpg" alt="Granville West Townhouses" loading="lazy" width="800" height="568"><span class="fx-pill pill-open">For lease</span></figure><div class="pc-body"><h3>Granville West Townhouses</h3><p>3131 Granville Dr NW, Edmonton</p></div><span class="pc-go" aria-hidden="true"><span class="arrow"></span></span></a></li>
+          <li class="pcard" data-type="lease multi"><a href="#contact" aria-label="Inquire about Alliance Residences Crystallina"><figure><img src="assets/images/projects/alliance-residences-crystallina/thumb.jpg" alt="Alliance Residences Crystallina" loading="lazy" width="800" height="568"><span class="fx-pill pill-open">For lease</span></figure><div class="pc-body"><h3>Alliance Residences Crystallina</h3><p>6940 178 Ave NW, Edmonton</p></div><span class="pc-go" aria-hidden="true"><span class="arrow"></span></span></a></li>
+          <li class="pcard" data-type="leased retail"><a href="#contact" aria-label="Inquire about Alliance Centre Glenridding"><figure><img src="assets/images/projects/alliance-centre-glenridding/thumb.jpg" alt="Alliance Centre Glenridding" loading="lazy" width="800" height="568"><span class="fx-pill pill-leased">Fully leased</span></figure><div class="pc-body"><h3>Alliance Centre Glenridding</h3><p>2045 163 St SW, Edmonton</p></div><span class="pc-go" aria-hidden="true"><span class="arrow"></span></span></a></li>
+          <li class="pcard" data-type="lease retail"><a href="#contact" aria-label="Inquire about Alliance Centre Southport"><figure><img src="assets/images/projects/alliance-centre-southport/thumb.jpg" alt="Alliance Centre Southport" loading="lazy" width="800" height="568"><span class="fx-pill pill-open">For lease</span></figure><div class="pc-body"><h3>Alliance Centre Southport</h3><p>3504 Ewing Trail SW, Edmonton</p></div><span class="pc-go" aria-hidden="true"><span class="arrow"></span></span></a></li>
+          <li class="pcard" data-type="lease retail"><a href="#contact" aria-label="Inquire about Alliance Centre Crystallina"><figure><img src="assets/images/projects/alliance-centre-crystallina/thumb.jpg" alt="Alliance Centre Crystallina" loading="lazy" width="800" height="568"><span class="fx-pill pill-open">For lease / sale</span></figure><div class="pc-body"><h3>Alliance Centre Crystallina</h3><p>66 St NW &amp; 178 Ave NW, Edmonton</p></div><span class="pc-go" aria-hidden="true"><span class="arrow"></span></span></a></li>
+          <li class="pcard" data-type="lease retail"><a href="#contact" aria-label="Inquire about Alliance Bazaar Wernerville"><figure><img src="assets/images/projects/alliance-bazaar-wernerville/thumb.jpg" alt="Alliance Bazaar Wernerville" loading="lazy" width="800" height="568"><span class="fx-pill pill-open">For lease</span></figure><div class="pc-body"><h3>Alliance Bazaar Wernerville</h3><p>6830 Ellerslie Rd SW, Edmonton</p></div><span class="pc-go" aria-hidden="true"><span class="arrow"></span></span></a></li>
+          <li class="pcard" data-type="lease retail"><a href="#contact" aria-label="Inquire about The Shoppes Chappelle Crossing"><figure><img src="assets/images/projects/the-shoppes-chappelle-crossing/thumb.jpg" alt="The Shoppes Chappelle Crossing" loading="lazy" width="800" height="568"><span class="fx-pill pill-open">For lease / sale</span></figure><div class="pc-body"><h3>The Shoppes Chappelle Crossing</h3><p>6403 Cartmell Pl SW, Edmonton</p></div><span class="pc-go" aria-hidden="true"><span class="arrow"></span></span></a></li>
+          <li class="pcard" data-type="lease retail"><a href="#contact" aria-label="Inquire about Alliance Centre Southridge"><figure><img src="assets/images/projects/alliance-centre-southridge/thumb.jpg" alt="Alliance Centre Southridge" loading="lazy" width="800" height="568"><span class="fx-pill pill-open">For lease</span></figure><div class="pc-body"><h3>Alliance Centre Southridge</h3><p>Fort Saskatchewan</p></div><span class="pc-go" aria-hidden="true"><span class="arrow"></span></span></a></li>
+          <li class="pcard" data-type="leased retail"><a href="#contact" aria-label="Inquire about Alliance Centre Silverberry"><figure><img src="assets/images/projects/alliance-centre-silverberry/thumb.jpg" alt="Alliance Centre Silverberry" loading="lazy" width="800" height="568"><span class="fx-pill pill-leased">Fully leased</span></figure><div class="pc-body"><h3>Alliance Centre Silverberry</h3><p>3341 34 St NW, Edmonton</p></div><span class="pc-go" aria-hidden="true"><span class="arrow"></span></span></a></li>
+          <li class="pcard" data-type="lease retail"><a href="#contact" aria-label="Inquire about Alliance Centre St. Albert Trail"><figure><img src="assets/images/projects/alliance-centre-st-albert-trail/thumb.jpg" alt="Alliance Centre St. Albert Trail" loading="lazy" width="800" height="568"><span class="fx-pill pill-open">For lease</span></figure><div class="pc-body"><h3>Alliance Centre St. Albert Trail</h3><p>13151 146 St NW, Edmonton</p></div><span class="pc-go" aria-hidden="true"><span class="arrow"></span></span></a></li>
+          <li class="pcard" data-type="lease retail"><a href="#contact" aria-label="Inquire about Alliance Centre Mistamin"><figure><img src="assets/images/projects/alliance-centre-mistamin/thumb.jpg" alt="Alliance Centre Mistamin" loading="lazy" width="800" height="568"><span class="fx-pill pill-open">For lease</span></figure><div class="pc-body"><h3>Alliance Centre Mistamin</h3><p>12719 156 St NW, Edmonton</p></div><span class="pc-go" aria-hidden="true"><span class="arrow"></span></span></a></li>
+          <li class="pcard" data-type="future retail"><a href="#contact" aria-label="Inquire about Alliance Centre 127 Ave 83 St"><figure><img src="assets/images/projects/alliance-centre-127-ave-83-st/thumb.jpg" alt="Alliance Centre 127 Ave 83 St" loading="lazy" width="800" height="568"><span class="fx-pill pill-future">Future project</span></figure><div class="pc-body"><h3>Alliance Centre 127 Ave 83 St</h3><p>127 Ave NW &amp; 83 St NW, Edmonton</p></div><span class="pc-go" aria-hidden="true"><span class="arrow"></span></span></a></li>
+          <li class="pcard" data-type="lease retail"><a href="#contact" aria-label="Inquire about Alliance Centre Riverside"><figure><img src="assets/images/projects/alliance-centre-riverside/thumb.jpg" alt="Alliance Centre Riverside" loading="lazy" width="800" height="568"><span class="fx-pill pill-open">For lease</span></figure><div class="pc-body"><h3>Alliance Centre Riverside</h3><p>3 Redspur Dr, St. Albert</p></div><span class="pc-go" aria-hidden="true"><span class="arrow"></span></span></a></li>
+          <li class="pcard" data-type="leased retail"><a href="#contact" aria-label="Inquire about Alliance Centre Southfork"><figure><img src="assets/images/projects/alliance-centre-southfork/thumb.jpg" alt="Alliance Centre Southfork" loading="lazy" width="800" height="568"><span class="fx-pill pill-leased">Fully leased</span></figure><div class="pc-body"><h3>Alliance Centre Southfork</h3><p>100 Southfork Dr, Leduc</p></div><span class="pc-go" aria-hidden="true"><span class="arrow"></span></span></a></li>
+          <li class="pcard" data-type="leased retail"><a href="#contact" aria-label="Inquire about Alliance Centre McConachie"><figure><img src="assets/images/projects/alliance-centre-mcconachie/thumb.jpg" alt="Alliance Centre McConachie" loading="lazy" width="800" height="568"><span class="fx-pill pill-leased">Fully leased</span></figure><div class="pc-body"><h3>Alliance Centre McConachie</h3><p>16510 59A St NW, Edmonton</p></div><span class="pc-go" aria-hidden="true"><span class="arrow"></span></span></a></li>
+          <li class="pcard" data-type="leased retail"><a href="#contact" aria-label="Inquire about McConachie Landing West"><figure><img src="assets/images/projects/mcconachie-landing-west/thumb.jpg" alt="McConachie Landing West" loading="lazy" width="800" height="568"><span class="fx-pill pill-leased">Fully leased</span></figure><div class="pc-body"><h3>McConachie Landing West</h3><p>6504 170 Ave NW, Edmonton</p></div><span class="pc-go" aria-hidden="true"><span class="arrow"></span></span></a></li>
+          <li class="pcard" data-type="lease retail"><a href="#contact" aria-label="Inquire about Alliance Centre Gorman"><figure><img src="assets/images/projects/alliance-centre-gorman/thumb.jpg" alt="Alliance Centre Gorman" loading="lazy" width="800" height="568"><span class="fx-pill pill-open">For lease</span></figure><div class="pc-body"><h3>Alliance Centre Gorman</h3><p>153 Ave &amp; 18 St NW, Edmonton</p></div><span class="pc-go" aria-hidden="true"><span class="arrow"></span></span></a></li>
+          <li class="pcard" data-type="lease retail"><a href="#contact" aria-label="Inquire about Heritage Valley Pointe"><figure><img src="assets/images/projects/heritage-valley-pointe/thumb.jpg" alt="Heritage Valley Pointe" loading="lazy" width="800" height="568"><span class="fx-pill pill-open">For lease</span></figure><div class="pc-body"><h3>Heritage Valley Pointe</h3><p>1115 103A St NW, Edmonton</p></div><span class="pc-go" aria-hidden="true"><span class="arrow"></span></span></a></li>
+          <li class="pcard" data-type="future retail"><a href="#contact" aria-label="Inquire about Chappelle Landing"><figure><img src="assets/images/projects/chappelle-landing/thumb.jpg" alt="Chappelle Landing" loading="lazy" width="800" height="568"><span class="fx-pill pill-future">Future project</span></figure><div class="pc-body"><h3>Chappelle Landing</h3><p>2804 Heritage Valley Trail SW, Edmonton</p></div><span class="pc-go" aria-hidden="true"><span class="arrow"></span></span></a></li>
+          <li class="pcard" data-type="lease retail"><a href="#contact" aria-label="Inquire about Wildflower Gate"><figure><img src="assets/images/projects/wildflower-gate/thumb.jpg" alt="Wildflower Gate" loading="lazy" width="800" height="568"><span class="fx-pill pill-open">For lease</span></figure><div class="pc-body"><h3>Wildflower Gate</h3><p>75 Wildwoods Court SW, Airdrie</p></div><span class="pc-go" aria-hidden="true"><span class="arrow"></span></span></a></li>
+          <li class="pcard" data-type="future retail"><a href="#contact" aria-label="Inquire about Rugby Land Urban Village"><figure><img src="assets/images/projects/rugby-land/thumb.jpg" alt="Rugby Land Urban Village" loading="lazy" width="800" height="568"><span class="fx-pill pill-future">Future project</span></figure><div class="pc-body"><h3>Rugby Land Urban Village</h3><p>111 St &amp; Ellerslie Rd, Edmonton</p></div><span class="pc-go" aria-hidden="true"><span class="arrow"></span></span></a></li>
+          <li class="pcard" data-type="land"><a href="#contact" aria-label="Inquire about Colchester"><figure><img src="assets/images/projects/colchester/thumb.jpg" alt="Colchester" loading="lazy" width="800" height="568"><span class="fx-pill pill-land">Land</span></figure><div class="pc-body"><h3>Colchester</h3><p>Sherwood Park</p></div><span class="pc-go" aria-hidden="true"><span class="arrow"></span></span></a></li>
+          <li class="pcard" data-type="land"><a href="#contact" aria-label="Inquire about Sturgeon County"><figure><img src="assets/images/projects/sturgeon-county/thumb.jpg" alt="Sturgeon County" loading="lazy" width="800" height="568"><span class="fx-pill pill-land">Land</span></figure><div class="pc-body"><h3>Sturgeon County</h3><p>Redwater and Sturgeon County area</p></div><span class="pc-go" aria-hidden="true"><span class="arrow"></span></span></a></li>
+          <li class="pcard" data-type="land"><a href="#contact" aria-label="Inquire about Redwater"><figure><img src="assets/images/projects/redwater/thumb.jpg" alt="Redwater" loading="lazy" width="800" height="568"><span class="fx-pill pill-land">Land</span></figure><div class="pc-body"><h3>Redwater</h3><p>Redwater area</p></div><span class="pc-go" aria-hidden="true"><span class="arrow"></span></span></a></li>
+          <li class="pcard" data-type="land"><a href="#contact" aria-label="Inquire about City of Leduc"><figure><img src="assets/images/projects/city-of-leduc/thumb.jpg" alt="City of Leduc" loading="lazy" width="800" height="568"><span class="fx-pill pill-land">Land</span></figure><div class="pc-body"><h3>City of Leduc</h3><p>Leduc area</p></div><span class="pc-go" aria-hidden="true"><span class="arrow"></span></span></a></li>
+        </ul>
+        <div class="pgrid-more"><button class="btn btn-ink" type="button" data-more aria-expanded="false">Show all projects</button></div>
         <div class="portfolio-foot">
           <p>Looking for a specific size, location or use? Our leasing team will match you with the right centre.</p>
           <a class="btn btn-ink" href="#contact">Ask about availability <span class="arrow" aria-hidden="true"></span></a>
@@ -310,73 +324,81 @@
 
     <!-- APPROACH -->
     <section class="approach section" id="approach" aria-labelledby="approach-title">
-      <div class="wrap approach-grid">
-        <div class="approach-head reveal">
-          <p class="eyebrow">How we work</p>
-          <h2 id="approach-title">Design first. <em>Partners always.</em></h2>
-          <p>We believe design is key to a successful development and retail project. That belief shapes how we plan, who we bring in and how we stay involved.</p>
-          <a class="btn btn-ink" href="#contact">Start a conversation <span class="arrow" aria-hidden="true"></span></a>
+      <div class="wrap">
+        <div class="section-head split reveal">
+          <div>
+            <p class="eyebrow">How we work</p>
+            <h2 id="approach-title">Design first. <em>Partners always.</em></h2>
+          </div>
+          <p class="section-intro">We believe design is key to a successful development and retail project. That belief shapes every stage, from the first plan to the partnerships that follow.</p>
         </div>
-        <div class="approach-cards">
-          <article class="principle reveal">
-            <span class="principle-mark" aria-hidden="true"></span>
-            <h3>Hands-on at every stage</h3>
-            <p>Our Group Directors work directly with key stakeholders from planning through leasing, so decisions are made by the people accountable for them.</p>
-          </article>
-          <article class="principle reveal">
-            <span class="principle-mark" aria-hidden="true"></span>
+        <div class="process" data-process>
+          <div class="process-rail" aria-hidden="true"><span class="process-fill"></span><span class="process-pulse"></span></div>
+          <ol class="process-steps">
+          <li class="step" style="--s:0">
+            <span class="step-node" aria-hidden="true"><span>01</span></span>
+            <p class="step-k">Plan</p>
+            <h3>Hands-on from day one</h3>
+            <p>Our Group Directors work directly with key stakeholders at every stage, from the first site plan onward.</p>
+          </li>
+          <li class="step" style="--s:1">
+            <span class="step-node" aria-hidden="true"><span>02</span></span>
+            <p class="step-k">Design</p>
             <h3>Edmonton's leading design consultants</h3>
-            <p>We partner with top local designers to plan and build eye-catching destinations that stand out in their neighbourhood.</p>
-          </article>
-          <article class="principle reveal">
-            <span class="principle-mark" aria-hidden="true"></span>
-            <h3>Retail partner success</h3>
-            <p>A centre only works when its tenants thrive. We are committed to growing relationships with current and future partners.</p>
-          </article>
-          <article class="principle reveal">
-            <span class="principle-mark" aria-hidden="true"></span>
-            <h3>Quality and quantity</h3>
-            <p>Millions of square feet developed, and millions more planned. We aim to bring both quality and scale to what comes next.</p>
-          </article>
+            <p>We partner with top local designers to plan and build eye-catching destinations. Design is key to a successful project.</p>
+          </li>
+          <li class="step" style="--s:2">
+            <span class="step-node" aria-hidden="true"><span>03</span></span>
+            <p class="step-k">Develop and lease</p>
+            <h3>Built, leased and managed</h3>
+            <p>We develop, sell and lease each property, and manage our neighbourhood and community retail centres.</p>
+          </li>
+          <li class="step" style="--s:3">
+            <span class="step-node" aria-hidden="true"><span>04</span></span>
+            <p class="step-k">Grow</p>
+            <h3>Partners for the long run</h3>
+            <p>We stay committed to growing relationships with current and future partners, bringing both quality and scale to what comes next.</p>
+          </li>
+          </ol>
         </div>
       </div>
     </section>
 
-
     <!-- CONTACT -->
-    <section class="contact section-ink" id="contact" aria-labelledby="contact-title">
-      <div class="contact-media" aria-hidden="true">
-        <img src="assets/images/home/slide-4.jpg" alt="" loading="lazy">
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="contact-marquee" aria-hidden="true">
+        <div class="cm-track"><span>Now leasing</span><span>Retail</span><span>Multi family</span><span>Land</span><span>Now leasing</span><span>Retail</span><span>Multi family</span><span>Land</span></div>
       </div>
       <div class="wrap contact-grid">
         <div class="contact-intro">
-          <p class="eyebrow eyebrow-light">Contact</p>
-          <h2 id="contact-title">Let's find the right space <em>for your business.</em></h2>
-          <p>Whether you are looking to lease, buy or partner on a future project, our team is ready to talk.</p>
+          <p class="eyebrow eyebrow-ink">Contact</p>
+          <h2 id="contact-title">Let's find the right space for your business.</h2>
+          <p class="contact-lede">Whether you are looking to lease, buy or partner on a future project, our team is ready to talk.</p>
+          <a class="contact-phone" href="tel:+17804331140"><span class="cp-k">Call our leasing team</span><span class="cp-num">(780) 433-1140</span></a>
           <dl class="contact-list">
-            <div><dt>Call</dt><dd><a href="tel:+17804331140">(780) 433-1140</a></dd></div>
             <div><dt>Email</dt><dd><a href="mailto:office@alliancemjdevelopments.com">office@alliancemjdevelopments.com</a></dd></div>
             <div><dt>Visit</dt><dd><a href="https://maps.google.com/?q=2045+163+St+SW+Edmonton+AB" target="_blank" rel="noopener">2045 163 St SW, Edmonton, AB</a></dd></div>
           </dl>
         </div>
         <form class="contact-form" action="mailto:office@alliancemjdevelopments.com" method="post" enctype="text/plain" novalidate>
           <h3>Send an inquiry</h3>
+          <p class="form-sub">Tell us what you are looking for and we will get back to you.</p>
           <div class="field-row">
             <label class="field"><span>Name</span><input type="text" name="name" autocomplete="name" required></label>
             <label class="field"><span>Phone</span><input type="tel" name="phone" autocomplete="tel"></label>
           </div>
           <label class="field"><span>Email</span><input type="email" name="email" autocomplete="email" required></label>
-          <label class="field"><span>I'm interested in</span>
-            <select name="interest">
-              <option>Leasing retail space</option>
-              <option>Buying a property</option>
-              <option>Multi family rentals</option>
-              <option>Land and future projects</option>
-              <option>Something else</option>
-            </select>
-          </label>
+          <fieldset class="field interest">
+            <legend>I'm interested in</legend>
+            <div class="interest-opts">
+              <label><input type="radio" name="interest" value="Leasing retail space" checked><span>Leasing space</span></label>
+              <label><input type="radio" name="interest" value="Buying a property"><span>Buying</span></label>
+              <label><input type="radio" name="interest" value="Multi family rentals"><span>Multi family</span></label>
+              <label><input type="radio" name="interest" value="Land and future projects"><span>Land</span></label>
+            </div>
+          </fieldset>
           <label class="field"><span>Message</span><textarea name="message" rows="4"></textarea></label>
-          <button class="btn btn-sun btn-block" type="submit">Send inquiry <span class="arrow" aria-hidden="true"></span></button>
+          <button class="btn btn-sun btn-lg btn-block" type="submit">Send inquiry <span class="arrow" aria-hidden="true"></span></button>
           <p class="form-note" role="status" aria-live="polite"></p>
         </form>
       </div>
@@ -407,9 +429,9 @@
       <nav class="footer-col" aria-label="Development">
         <h3>Development</h3>
         <ul>
-          <li><a href="#developments" data-tab-link="tab-retail">Retail development</a></li>
-          <li><a href="#developments" data-tab-link="tab-multi">Multi family development</a></li>
-          <li><a href="#developments" data-tab-link="tab-land">Land holdings</a></li>
+          <li><a href="#dev-retail">Retail development</a></li>
+          <li><a href="#dev-multi">Multi family development</a></li>
+          <li><a href="#dev-land">Land holdings</a></li>
         </ul>
       </nav>
       <div class="footer-col">
