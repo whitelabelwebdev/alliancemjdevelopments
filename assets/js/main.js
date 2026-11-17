@@ -98,7 +98,7 @@
   var chips = document.querySelectorAll('.chip');
   var shownEl = document.querySelector('[data-shown]');
   var moreBtn = document.querySelector('[data-more]');
-  var LIMIT = 8;
+  var LIMIT = Infinity; /* all projects are shown, as on the live site */
   function applyFilter(key) {
     chips.forEach(function (c) {
       var on = c.getAttribute('data-filter') === key;
@@ -114,7 +114,7 @@
       else { card.classList.remove('is-extra'); }
     });
     if (shownEl) shownEl.textContent = n;
-    var collapsed = grid.classList.contains('is-collapsed');
+    var collapsed = false;
     if (moreBtn) moreBtn.parentNode.hidden = !(n > LIMIT && collapsed);
   }
   chips.forEach(function (c) { c.addEventListener('click', function () { applyFilter(c.getAttribute('data-filter')); }); });
