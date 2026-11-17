@@ -143,6 +143,7 @@
   if (apWrap) {
     var panels = Array.prototype.slice.call(apWrap.querySelectorAll('.ap-panel'));
     var DUR = 5000, cur = 0, timer = null, inView = false, hovering = false;
+    var desktopAP = window.matchMedia('(min-width: 981px)'); /* auto-rotate only on desktop; tap to open on phones */
     apWrap.style.setProperty('--ap-dur', DUR + 'ms');
     var show = function (i) {
       cur = i;
@@ -157,7 +158,7 @@
     };
     var schedule = function () {
       clearTimeout(timer);
-      if (reduce || !inView || hovering) return;
+      if (reduce || !inView || hovering || !desktopAP.matches) return;
       timer = setTimeout(function () { show((cur + 1) % panels.length); }, DUR);
     };
     panels.forEach(function (p, k) {
