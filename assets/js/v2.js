@@ -78,19 +78,51 @@
     update();
   }
 
-  /* Project list: location tabs (same groups as the live site) */
+  /* Project browser: location tabs plus live preview card */
+  var items = Array.prototype.slice.call(document.querySelectorAll('.pb-item'));
   var tabs = document.querySelectorAll('.tab');
-  var rows = document.querySelectorAll('.row');
+  var countEl = document.querySelector('[data-pb-count]');
+  var preview = document.querySelector('.pb-preview');
+  var pv = {
+    img: document.querySelector('[data-pv-img]'), tag: document.querySelector('[data-pv-tag]'),
+    name: document.querySelector('[data-pv-name]'), addr: document.querySelector('[data-pv-addr]'), town: document.querySelector('[data-pv-town]')
+  };
+  var swapTimer = null;
+  function select(item) {
+    if (!item || item.classList.contains('is-on') && pv.name.textContent === item.querySelector('.pb-name').textContent) return;
+    items.forEach(function (x) { x.classList.toggle('is-on', x === item); });
+    pv.name.textContent = item.querySelector('.pb-name').textContent;
+    pv.addr.textContent = item.getAttribute('data-addr');
+    pv.town.textContent = item.getAttribute('data-town');
+    pv.tag.className = 'tag ' + item.getAttribute('data-pill');
+    pv.tag.textContent = item.getAttribute('data-status');
+    var src = item.getAttribute('data-img');
+    pv.img.classList.add('is-swap');
+    clearTimeout(swapTimer);
+    swapTimer = setTimeout(function () { pv.img.src = src; pv.img.onload = function () { pv.img.classList.remove('is-swap'); }; if (pv.img.complete) pv.img.classList.remove('is-swap'); }, 180);
+  }
+  var previewShown = function () { return preview && getComputedStyle(preview).display !== 'none'; };
+  items.forEach(function (it) {
+    var btn = it.querySelector('button');
+    btn.addEventListener('mouseenter', function () { if (previewShown()) select(it); });
+    btn.addEventListener('focus', function () { if (previewShown()) select(it); });
+    btn.addEventListener('click', function () {
+      if (previewShown()) { select(it); }
+      else { document.getElementById('contact').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' }); }
+    });
+  });
   tabs.forEach(function (t) {
     t.addEventListener('click', function () {
-      var loc = t.getAttribute('data-loc');
+      var loc = t.getAttribute('data-loc'), n = 0, firstShown = null;
       tabs.forEach(function (x) { var on = x === t; x.classList.toggle('is-active', on); x.setAttribute('aria-selected', String(on)); });
-      rows.forEach(function (r) {
-        var show = loc === 'all' || r.getAttribute('data-loc') === loc;
-        r.classList.toggle('is-hidden', !show);
-        r.classList.remove('is-new');
-        if (show) { void r.offsetWidth; r.classList.add('is-new'); }
+      items.forEach(function (it) {
+        var show = loc === 'all' || it.getAttribute('data-loc') === loc;
+        it.classList.toggle('is-hidden', !show);
+        it.classList.remove('is-new');
+        if (show) { n++; if (!firstShown) firstShown = it; void it.offsetWidth; it.classList.add('is-new'); }
       });
+      if (countEl) countEl.textContent = n;
+      if (firstShown) select(firstShown);
     });
   });
 
