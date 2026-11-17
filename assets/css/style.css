@@ -68,12 +68,11 @@ button { font: inherit; cursor: pointer; }
 .skip:focus { left: 8px; }
 
 .eyebrow {
-  display: inline-flex; align-items: center; gap: 12px;
-  font-size: 14px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase;
-  color: var(--ink); margin-bottom: 22px;
+  display: inline-block;
+  font-size: 17px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--sun-deep); margin-bottom: 22px;
 }
-.eyebrow::before { content: ""; width: 28px; height: 2px; background: var(--sun); }
-.eyebrow-light { color: var(--white); }
+.eyebrow-light { color: var(--sun); }
 
 .lead { font-size: clamp(21px, 1.9vw, 25px); line-height: 1.45; color: var(--ink); }
 .small { font-size: 16px; color: var(--muted); }
