@@ -138,22 +138,42 @@
   });
   if (grid) applyFilter('all');
 
-  /* How we work: swap the sticky image as each stage scrolls into focus */
-  var hwSteps = document.querySelectorAll('.hw-step');
-  var hwImgs = document.querySelectorAll('[data-hw-img]');
-  var hwCap = document.querySelector('[data-hw-cap]');
-  var hwBar = document.querySelector('[data-hw-bar]');
-  function setStep(i) {
-    hwSteps.forEach(function (s, k) { s.classList.toggle('is-on', k === i); });
-    hwImgs.forEach(function (im, k) { im.classList.toggle('is-on', k === i); });
-    if (hwCap) hwCap.textContent = hwSteps[i].querySelector('.hw-k').textContent;
-    if (hwBar) hwBar.style.width = ((i + 1) / hwSteps.length * 100) + '%';
-  }
-  if (hwSteps.length && 'IntersectionObserver' in window) {
-    var hio = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) { if (en.isIntersecting) setStep(+en.target.getAttribute('data-hw')); });
-    }, { rootMargin: '-45% 0px -45% 0px' });
-    hwSteps.forEach(function (s) { hio.observe(s); });
+  /* How we work: expanding panels that rotate on their own */
+  var apWrap = document.querySelector('[data-ap-wrap]');
+  if (apWrap) {
+    var panels = Array.prototype.slice.call(apWrap.querySelectorAll('.ap-panel'));
+    var DUR = 5000, cur = 0, timer = null, inView = false, hovering = false;
+    apWrap.style.setProperty('--ap-dur', DUR + 'ms');
+    var show = function (i) {
+      cur = i;
+      panels.forEach(function (p, k) {
+        var on = k === i;
+        p.classList.toggle('is-on', on);
+        p.setAttribute('aria-expanded', String(on));
+        var bar = p.querySelector('.ap-timer i');
+        if (on && bar) { bar.style.animation = 'none'; void bar.offsetWidth; bar.style.animation = ''; }
+      });
+      schedule();
+    };
+    var schedule = function () {
+      clearTimeout(timer);
+      if (reduce || !inView || hovering) return;
+      timer = setTimeout(function () { show((cur + 1) % panels.length); }, DUR);
+    };
+    panels.forEach(function (p, k) {
+      p.addEventListener('click', function () { if (k !== cur) show(k); });
+      p.addEventListener('mouseenter', function () { if (window.matchMedia('(hover: hover)').matches && k !== cur) show(k); });
+      p.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); show(k); }
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); panels[(k + 1) % panels.length].focus(); }
+        if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); panels[(k - 1 + panels.length) % panels.length].focus(); }
+      });
+    });
+    apWrap.addEventListener('mouseenter', function () { hovering = true; apWrap.classList.add('is-paused'); clearTimeout(timer); });
+    apWrap.addEventListener('mouseleave', function () { hovering = false; apWrap.classList.remove('is-paused'); show(cur); });
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (en) { inView = en[0].isIntersecting; if (inView) show(cur); else clearTimeout(timer); }, { threshold: 0.35 }).observe(apWrap);
+    }
   }
 
   /* Gallery marquee: duplicate items for a seamless loop */
