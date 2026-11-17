@@ -138,22 +138,22 @@
   });
   if (grid) applyFilter('all');
 
-  /* How we work: scroll-driven progress along the process rail */
-  var proc = document.querySelector('[data-process]');
-  if (proc) {
-    var stepsEls = proc.querySelectorAll('.step');
-    var updateProc = function () {
-      var r = proc.getBoundingClientRect();
-      var vh = window.innerHeight;
-      var p = (vh * 0.8 - r.top) / (r.height + vh * 0.3);
-      p = Math.max(0, Math.min(1, p));
-      if (reduce) p = 1;
-      proc.style.setProperty('--p', p.toFixed(3));
-      stepsEls.forEach(function (s, i) { s.classList.toggle('is-on', p >= (i / stepsEls.length) + 0.02); });
-    };
-    window.addEventListener('scroll', updateProc, { passive: true });
-    window.addEventListener('resize', updateProc);
-    updateProc();
+  /* How we work: swap the sticky image as each stage scrolls into focus */
+  var hwSteps = document.querySelectorAll('.hw-step');
+  var hwImgs = document.querySelectorAll('[data-hw-img]');
+  var hwCap = document.querySelector('[data-hw-cap]');
+  var hwBar = document.querySelector('[data-hw-bar]');
+  function setStep(i) {
+    hwSteps.forEach(function (s, k) { s.classList.toggle('is-on', k === i); });
+    hwImgs.forEach(function (im, k) { im.classList.toggle('is-on', k === i); });
+    if (hwCap) hwCap.textContent = hwSteps[i].querySelector('.hw-k').textContent;
+    if (hwBar) hwBar.style.width = ((i + 1) / hwSteps.length * 100) + '%';
+  }
+  if (hwSteps.length && 'IntersectionObserver' in window) {
+    var hio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) setStep(+en.target.getAttribute('data-hw')); });
+    }, { rootMargin: '-45% 0px -45% 0px' });
+    hwSteps.forEach(function (s) { hio.observe(s); });
   }
 
   /* Gallery marquee: duplicate items for a seamless loop */
